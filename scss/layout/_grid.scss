@@ -1,0 +1,321 @@
+//_grid
+@use '../utility/_index' as utility;
+
+.nav__wrapper {
+    display: flex;
+    flex-direction: column;
+    @include utility.tablet {
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: unset;
+        margin: 0 1rem;
+    }
+    @include utility.desktop {
+        margin: 0 10rem;
+    }
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem;
+    @include utility.tablet {
+        padding: 1.813rem 1rem;
+        
+    }
+    @include utility.desktop {
+        padding: 2.688rem 0;
+    }
+}
+
+.social__container {
+    display: flex;
+    justify-content: center;
+    gap: 1.625rem;
+    z-index: 1;
+    @include utility.desktop {
+        padding-right: 1.625rem;
+    }
+}
+
+.hero__wrapper {
+    @include utility.desktop {
+        padding: 0 10rem;
+    }
+}
+
+.hero-image__wrapper {
+    @include utility.tablet {
+        width: 41%;
+        max-width: 100%;
+    }
+    @include utility.desktop {
+        height: 100%;
+    }
+
+    img {
+        margin: 0 auto;
+        position: relative;
+        transform: translateY(-6rem);
+        width: 10.875rem;
+        height: 24rem;    
+        @include utility.tablet {
+            width: 20.125rem;
+            height: 37.5rem;
+        }
+        @include utility.desktop {
+            width: 28rem;
+            height: 45rem;
+            transform: translateY(-7rem);
+        }
+
+    }
+
+    picture {
+        height: 18.125rem;
+        @include utility.tablet {
+            height: 35rem;
+        }
+    }
+}
+
+.hero-text__wrapper {
+    @include utility.tablet {
+        width: 59%;
+        z-index: 5;
+        padding-left: 2rem;
+    }    
+    @include utility.desktop {
+        padding-left: 0;
+    }
+        
+    h1 {
+        margin-top: 2.5rem;
+        @include utility.tablet {
+            width: 115%;
+            margin-top: 4.5rem;    
+        }
+    } 
+
+    p {
+        margin: 1.5rem 1rem;
+        @include utility.tablet {
+            margin: 3.5rem 1rem 2.125rem 0;
+        }
+        @include utility.desktop {
+            margin: 3.5rem 15rem 2.125rem 0;
+        }
+    }
+}
+
+.break {
+    display: none;
+    @include utility.tablet {
+        display: inline;
+    }
+    @include utility.desktop {
+        display: none;
+    }
+}
+
+.contact-link::after {
+    margin: 0 8rem;
+    @include utility.tablet {
+        margin: 0 19rem 0 0;
+        width: 7.5rem;
+    }    
+    
+}
+
+.skills__container {
+    @include utility.tablet {
+        margin: 0 2rem;
+    }
+    @include utility.desktop {
+        margin: 0 10rem;
+    }
+}
+
+.skills__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: 40vh;
+}
+
+.projects__wrapper {
+    padding-bottom: 4.5rem;
+    padding-top: 5rem;
+    @include utility.desktop {
+        padding-bottom: 8.5rem;
+    }
+}
+
+
+
+.projects__header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include utility.tablet {
+        justify-content: space-between;
+        margin: 0 2rem;
+    }
+    @include utility.desktop {
+        margin: 0 10rem;
+    }
+}
+
+.project__content {
+    margin-top: 2.5rem;
+}
+
+.projects__gallary {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    @include utility.desktop {
+        margin: 1rem 10rem;
+    }
+}
+
+.project__image {
+    margin: 1rem 0;
+}
+
+.project__links {
+    padding-top: 1.25rem;
+}
+
+.links__hidden {
+    @include utility.desktop {
+    display: none;
+    }
+}
+
+.project__image {
+    position: relative;
+    display: inline-block;
+
+    .links__hovered {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease-in-out;
+        background-color: utility.$black_hover;
+        gap: 1rem;
+    }
+    &:hover {
+        .links__hovered {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }    
+}
+
+.bottom__wrapper {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+.contact__wrapper {
+    display: flex;
+    flex-direction: column;
+    @include utility.desktop {
+        flex-direction: unset;
+    }
+}
+
+
+.contact__header {
+    padding: 3.125rem 1rem;
+    @include utility.tablet {
+        padding: 3.5rem 10rem;
+    }
+    @include utility.desktop {
+        padding: 5.25rem 5rem 3.5rem 10rem;
+        width: 50%;
+    }
+    h1 {
+        padding-bottom: 1.25rem;
+        @include utility.desktop {
+            padding-bottom: 3rem;
+        }
+    }    
+    p {
+        @include utility.desktop {
+            padding-right: 2rem;
+        }
+    }    
+    
+}
+
+.form__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 3.125rem 1rem;
+    @include utility.tablet {
+        padding: 3.5rem 10rem 5.75rem 10rem;
+    }
+    @include utility.desktop {
+        padding: 5.25rem 10rem 5.75rem 5rem;
+        width: 50%;
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3.125rem;
+    @include utility.tablet {
+        flex-direction: row;
+        justify-content: space-around;
+        padding-bottom: 1rem;
+    }
+    @include utility.desktop {
+        justify-content: space-between;
+        padding: 2.625rem 10rem 5.625rem 10rem;
+    }
+
+    h1 {
+        padding: 1.25rem 0;
+        @include utility.tablet {
+            padding: 2rem 0;
+        }
+        
+    }
+}
+
+.name__footer {
+    text-decoration-line: none;
+}
+
+.skills__wrapper {
+    @include utility.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include utility.desktop {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.projects__gallary {
+    @include utility.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}

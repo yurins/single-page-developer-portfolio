@@ -1,0 +1,213 @@
+@use '../utility/index' as utility;
+
+.logo {
+    color: utility.$white;
+    text-decoration: none;
+}
+
+.hero-text__wrapper {
+    text-align: center;
+    @include utility.tablet {
+        text-align: left;
+    }
+
+    h1 {
+        color: utility.$white;
+        font-size: 2.5rem;
+        @include utility.tablet {
+            font-size: 4.5rem;
+            line-height: 4.5rem;
+            letter-spacing: -0.128rem;
+        }
+        @include utility.desktop {
+            font-size: 5.5rem;
+            line-height: 5.5rem;
+            letter-spacing: -0.156rem;
+        }
+    }
+
+    p {
+        font-size: 1rem;
+        color: utility.$gray;
+        line-height: 1.625rem;
+        @include utility.tablet {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+        }
+    }
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-color: utility.$green;
+    text-underline-offset: .625rem;
+}
+
+.contact-link,
+.contact-link__projects {
+    color: utility.$white;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    letter-spacing: 0.143rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contact-link {
+    &:hover {
+        color: #4EE1A0;
+    }
+}
+
+.contact-link::after,
+.contact-link__projects::after,
+.view-project::after,
+.view-code::after,
+.send__btn::after {
+    content: "";
+    display: block;
+    border-bottom: 0.125rem solid utility.$green;
+    padding-bottom: 0.625rem;
+}
+
+.hero__wrapper::after {
+    content: "";
+    display: block;
+    border-bottom: 0.063rem solid utility.$white;
+    width: 92%;
+    max-width: 100%;
+    margin: 5rem auto 2.5rem auto;
+    @include utility.tablet {
+        margin: 0 auto;
+    }
+    @include utility.desktop {
+        margin: 8rem 0 4.375rem 0;
+        width: 100%;
+    }
+}
+
+.skills__wrapper {
+    text-align: center;
+    @include utility.tablet {
+        text-align: left;
+    }
+}
+
+.skill {
+    h2 {
+        font-size: 2rem;
+        color: utility.$white;
+        @include utility.tablet {
+            font-size: 3rem;
+        }
+    }
+    p {
+        font-size: 1rem;
+        color: utility.$gray;
+        line-height: 1.625rem;
+    }
+}
+
+.skills__container {
+    &:after {
+               content: "";
+                display: block;
+                border-bottom: 0.063rem solid utility.$white;
+                margin: 0 1rem;
+                @include utility.tablet {
+                    display: none;
+                }
+            }
+}            
+
+.projects__header {
+    h1 {
+        color: utility.$white;
+        font-size: 2.5rem;
+        font-weight:700;
+        @include utility.tablet {
+            font-size: 4.5rem;
+        }
+    }
+}
+
+.project__title {
+    color: utility.$white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 3.5rem;
+}
+
+.project__skill {
+    color: utility.$gray;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.project__links {
+    color: utility.$white;
+    display: flex;
+    gap: 2rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.143rem;
+    line-height: 1.625rem;
+}
+
+.view-project__hovered,
+.view-code__hovered {
+    @include utility.desktop {
+        color: utility.$white;
+        gap: 2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 0.143rem;
+        line-height: 1.625rem;
+        &:hover {
+            color: utility.$green;
+        }
+    }    
+}
+
+.contact__header {
+    text-align: center;
+    @include utility.desktop {
+        text-align: left;
+    }
+    h1 {
+        font-size: 2.5rem;
+        color: utility.$white;
+        letter-spacing: -0.071rem;
+        @include utility.tablet {
+            font-size: 4.5rem;
+            letter-spacing: 0.128rem;
+            line-height: 4.5rem;
+        }
+        @include utility.desktop {
+            font-size: 5.5rem;
+            line-height: 5.5rem;
+            letter-spacing: -0.156rem;
+        }
+    }    
+    
+    p {
+        font-size: 1rem;
+        color: utility.$gray;
+        line-height: 1.625rem;
+        @include utility.tablet {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+            letter-spacing: 0;
+        }        
+    }
+}
+
+footer {
+    h1 {
+        a {
+        color: utility.$white;
+        }
+    }
+}

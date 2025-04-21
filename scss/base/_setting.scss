@@ -1,0 +1,124 @@
+@use '../utility/_index' as utility;
+
+*{
+    font-family: utility.$font;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: utility.$black;
+    overflow-x: hidden;
+}
+
+main {
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.hero__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-image: url(../images/pattern-rings.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-blend-mode: initial;
+    background-position: -20rem 2rem;
+    @include utility.tablet {
+        flex-direction: row-reverse;
+        background-position: -16rem 0;
+    }
+    @include utility.desktop {
+        background-position: -6rem 0;
+    }
+ 
+}
+
+.bg-circle-image {
+    &:after {
+        content:"";
+        display: block;
+        height: 100%;
+        background-image: url(../images/pattern-circle.svg);
+        background-repeat: no-repeat;
+        background-size: initial;
+        background-blend-mode: initial;
+        transform: translate(80%, -80%);
+        @include utility.tablet {
+            transform: translate(80%, -40%);
+        }
+        @include utility.desktop {
+            transform: translate(-12%, -54%);
+        }
+    }
+ }
+
+.skills__wrapper {
+    &:after {
+        content: "";
+        background-image: url(../images/pattern-rings.svg);
+        background-repeat: no-repeat;
+        background-size: initial;
+        position: absolute;
+        width: 40%;
+        height: 26%;
+        z-index: 0;
+        top: 95%;
+        left: 60%;
+        max-width: 100%;
+        @include utility.tablet {
+            width: 28%;
+            height: 20%;
+            top: 80%;
+            left: 72%;
+        }
+        @include utility.desktop {
+            width: 20%;
+            height: 20%;
+            top: 90%;
+            left: 80%;
+        }
+    }
+
+}
+
+.contact__wrapper {
+    background-color: utility.$darkGray;
+    background-image: url(../images/pattern-rings.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-blend-mode: initial;
+    background-position: -24rem 31rem;
+    @include utility.tablet {
+        background-position: -22rem 40rem;
+    }
+    @include utility.desktop {
+        background-position: -14rem 24rem;
+    }
+}
+
+.line {
+        content: "";
+        display: block;
+        border-bottom: 0.063rem solid utility.$white;
+        width: 92%;
+        max-width: 100%;
+        margin: 0 auto;
+        @include utility.desktop {
+            width: 78%;
+        }
+}
+
+.social__link {
+    a {
+        transition: color 0.3s ease, filter 0.3s ease;
+    }
+
+    &:hover {
+        img {
+        filter: brightness(0) saturate(100%) invert(70%) sepia(37%) saturate(537%) hue-rotate(104deg) brightness(95%) contrast(89%);
+        }
+    }
+}

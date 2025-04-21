@@ -1,0 +1,15 @@
+@use '../utility/index' as utility;
+
+.send__btn {
+    background: none;
+    border: none;
+    align-self: end;
+    color: utility.$white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.143rem;
+    padding: 2rem 0;
+    &:hover {
+        color: utility.$green;
+    }
+}

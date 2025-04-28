@@ -587,7 +587,7 @@ main {
 }
 @media screen and (min-width: 80rem) {
   .hero-image__wrapper img {
-    width: 27.813rem;
+    width: 28rem;
     height: 45rem;
     transform: translateY(-7rem);
   }
@@ -675,7 +675,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.5rem 3rem;
   min-height: 40vh;
 }
 
